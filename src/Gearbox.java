@@ -5,6 +5,7 @@ public class Gearbox {
     private int maxGears;
     private boolean clutchIsIn;
     private List<Gear> gears = new ArrayList<>();
+    private int currentGear;
 
     public Gearbox(int maxGears) {
         this.maxGears = maxGears;
