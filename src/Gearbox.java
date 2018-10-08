@@ -26,6 +26,17 @@ public class Gearbox {
         gears.add(gear);
     }
 
+    public void changeGear(int newGear) {
+        if ((newGear > 0 && newGear <= maxGears) && clutchIsIn) {
+            this.currentGear = newGear;
+            System.out.println(" Gear " + newGear + "selected");
+        } else {
+            System.out.println("gggrrrr");
+            this.currentGear = 0;
+        }
+    }
+
+
     private class Gear {
         private int gearNumber;
         private double ratio;
@@ -46,8 +57,6 @@ public class Gearbox {
             this.ratio = ratio;
         }
     }
-
-
 
 
 }
