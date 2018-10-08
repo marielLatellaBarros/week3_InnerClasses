@@ -1,8 +1,10 @@
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Gearbox {
     private int maxGears;
     private boolean clutchIsIn;
+    private List<Gear> gears = new ArrayList<>();
 
     public Gearbox(int maxGears) {
         this.maxGears = maxGears;
@@ -10,6 +12,10 @@ public class Gearbox {
 
     public void operateClutch(boolean in) {
         this.clutchIsIn = in;
+    }
+
+    public void addGear(Gear gear) {
+        gears.add(gear);
     }
 
     public class Gear {
