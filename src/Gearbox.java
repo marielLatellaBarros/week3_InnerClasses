@@ -9,6 +9,13 @@ public class Gearbox {
 
     public Gearbox(int maxGears) {
         this.maxGears = maxGears;
+
+        for (int i = 0; i < maxGears; i++) {
+            Gear gear = new Gear();
+            gear.setNumber(i + 1);
+            gear.setRatio(5.3 * gear.getGearNumber());
+            gears.add(gear);
+        }
     }
 
     public void operateClutch(boolean in) {
@@ -25,6 +32,18 @@ public class Gearbox {
 
         public double driveSpeed(int revs) {
             return revs * ratio;
+        }
+
+        public void setNumber(int number) {
+            this.gearNumber = number;
+        }
+
+        public int getGearNumber() {
+            return gearNumber;
+        }
+
+        public void setRatio(double ratio) {
+            this.ratio = ratio;
         }
     }
 
