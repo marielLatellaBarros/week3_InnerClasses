@@ -12,5 +12,16 @@ public class Gearbox {
         this.clutchIsIn = in;
     }
 
+    public class Gear {
+        private int gearNumber;
+        private double ratio;
+
+        public double driveSpeed(int revs) {
+            return revs * ratio;
+        }
+    }
+
+
+
 
 }
