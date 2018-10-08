@@ -18,7 +18,7 @@ public class Gearbox {
         gears.add(gear);
     }
 
-    public class Gear {
+    private class Gear {
         private int gearNumber;
         private double ratio;
 
