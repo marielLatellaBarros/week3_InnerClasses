@@ -10,5 +10,20 @@ public class HorrowShow {
                 System.out.println("I'll drink your blood!");
             }
         }
+
+        class Werewolf implements DangerousMonster {
+
+            @Override
+            public void destroy(Monster monster) {
+                monster.menace();
+                System.out.println("Big fight!!!!");
+                System.out.println(this.getClass().getSimpleName() + " killed one " + monster.getClass().getSimpleName());
+            }
+
+            @Override
+            public void menace() {
+                System.out.println("I'll destoy you!");
+            }
+        }
     }
 }
