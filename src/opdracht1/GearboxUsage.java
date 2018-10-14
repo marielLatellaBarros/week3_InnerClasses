@@ -1,3 +1,5 @@
+package opdracht1;
+
 public class GearboxUsage {
 	public static void main(String[] args) {
 		Gearbox mcLaren = new Gearbox(6);

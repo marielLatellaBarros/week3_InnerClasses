@@ -1,3 +1,5 @@
+package opdracht1;
+
 public class GearBoxApp {
     public static void main (String[] args) {
 
