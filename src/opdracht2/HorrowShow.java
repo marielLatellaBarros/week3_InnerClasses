@@ -3,8 +3,9 @@ package opdracht2;
 public class HorrowShow {
     public static void main (String[] args) {
 
-        class Vampire implements Monster {
 
+
+        class Vampire implements Monster {
             @Override
             public void menace() {
                 System.out.println("I'll drink your blood!");
@@ -12,7 +13,6 @@ public class HorrowShow {
         }
 
         class Werewolf implements DangerousMonster {
-
             @Override
             public void destroy(Monster monster) {
                 monster.menace();
@@ -22,8 +22,13 @@ public class HorrowShow {
 
             @Override
             public void menace() {
-                System.out.println("I'll destoy you!");
+                System.out.println("I'll destroy you!");
             }
         }
+
+        Werewolf werewolf = new Werewolf();
+        werewolf.destroy(new Vampire());
+        werewolf.destroy(() -> System.out.println("You smell like wet dog!!!"));
+
     }
 }
